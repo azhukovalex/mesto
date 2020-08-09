@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Проект "Mesto"
 Четвертая самостоятельная работа по созданию простого одностраничного сайта с элементами JS.
 =======
@@ -13,7 +13,7 @@
 >>>>>>> 6e65cc202e0d84d5fe43bd6d8d66f8b206ecda8b
 
 * [Ссылка на макет в Figma](https://www.figma.com/file/StZjf8HnoeLdiXS7dYrLAh/JavaScript.-Sprint-4)
-* [Ссылка на проект в Github](https://azhukovalex.github.io/russian-travel/)
+* [Ссылка на проект в Github](https://azhukovalex.github.io/mesto/)
 
 ### В работе были реализованы:
 1. Верстка согласно методологии БЭМ.
