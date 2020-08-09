@@ -1,0 +1,16 @@
+.page {
+  background-color: black;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  font-family: "Inter", "Arial", "Helvetica", sans-serif;
+  margin: 0 auto;
+  padding: 0 19px 0;
+}
+
+@media (max-width: 320px) {
+  .page {
+    padding: 0;
+  }
+}
