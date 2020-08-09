@@ -38,7 +38,7 @@
 .header__logo {
   width: 142px;
   height: 34px;
-  padding-left: 26px;
+  /* padding-left: 26px; */
 }
 
 @media (max-width: 645px) {
@@ -274,7 +274,7 @@
   width: 100%;
   max-width: 882px;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 34px;
 }
 
 @media (max-width: 645px) {
@@ -325,11 +325,11 @@
 .popup__container {
   position: fixed;
   background-color: white;
-  top: 20%;
-  left: 50%;
   color: black;
-  transform: translateX(-50%);
   border-radius: 10px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .popup__form {
@@ -340,7 +340,7 @@
   padding: 34px 36px 37px;
 }
 
-@media (max-width: 645px) {
+@media (max-width: 619px) {
   .popup__form {
     width: 210px;
 
@@ -355,7 +355,7 @@
   margin: 0 0 12px;
 }
 
-@media (max-width: 645px) {
+@media (max-width: 619px) {
   .popup__title {
     width: 190px;
   }
@@ -383,7 +383,7 @@
   padding: 16px 125px 13px;
 }
 
-@media (max-width: 645px) {
+@media (max-width: 619px) {
   .button_type_save  {
     width: 212px;
     padding: 16px 0 13px;
