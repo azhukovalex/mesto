@@ -2,7 +2,7 @@
     position: absolute;
     left: 99%;
     bottom: 99%;
-    background-image: url(../../../images/Add_Button.png);
+    background-image: url(../../../images/Add.svg);
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
     border: none;
