@@ -17,3 +17,8 @@
       margin-top: 20px;
     }
   }
+
+  .button:hover {
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    }

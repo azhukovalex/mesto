@@ -2,7 +2,6 @@
 # Проект "Mesto"
 Четвертая самостоятельная работа по созданию простого одностраничного сайта с элементами JS.
 =======
-**Figma**
 
 * [Ссылка на макет в Figma](https://www.figma.com/file/StZjf8HnoeLdiXS7dYrLAh/JavaScript.-Sprint-4)
 * [Ссылка на проект в Github](https://azhukovalex.github.io/mesto/)
