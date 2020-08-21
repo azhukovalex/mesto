@@ -7,3 +7,7 @@
     margin-right: 18px;
     border: none;
   }
+
+  .button_type_like-liked {
+    background-image: url(../../../images/liked.svg);
+  }

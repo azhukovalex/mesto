@@ -5,6 +5,7 @@
 @import url(../blocks/profile/profile.css);
 @import url(../blocks/button/button.css);
 @import url(../blocks/button/_type/button_type_save.css);
+@import url(../blocks/button/_type/button_type_delete.css);
 @import url(../blocks/card-list/card-list.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/popup/popup.css);

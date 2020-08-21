@@ -1,0 +1,10 @@
+.button_type_delete {
+    width: 18px;
+    height: 21px;
+    background-image: url(../../../images/Trash.svg);
+    border: none;
+    background-color: transparent;
+    margin: 16px 0 0 249px;
+    padding: 0;
+    position: absolute;
+}
