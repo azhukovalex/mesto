@@ -2,92 +2,88 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
+  <link rel="stylesheet" href="./pages/index.css" />
 </head>
 
-<body class="page"> 
+<body class="page">
   <header class="header">
-    <img class="header__logo" src="./images/header__logo.svg" alt="Логотип Место">
+    <img class="header__logo" src="./images/logo.svg" alt="Логотип Место" />
   </header>
 
   <main class="main">
     <section class="profile">
       <div class="profile__author">
-        <img class="profile__image" src="./images/Cousteau.jpg" alt="Фотография Ж. Кусто">
+        <img class="profile__image" src="./images/Cousteau.jpg" alt="Фотография Ж. Кусто" />
         <div class="profile__info">
           <div class="profile__text">
             <h1 class="profile__title">Жак-Ив Кусто</h1>
-            <button class="button button_type_edit" aria-label="Редактировать"></button>
+            <button class="button button_type_edit" type="button" aria-label="Редактировать"></button>
           </div>
           <p class="profile__subtitle">Исследователь океана</p>
-         </div>
+        </div>
       </div>
-      <button class="button button_type_add" aria-label="Добавить фото"></button>
+      <button class="button button_type_add" type="button" aria-label="Добавить фото"></button>
     </section>
 
-    <ul class="card-list main__card-list">
-        <li class="card">
-          <img class="card__image" src="./images/elements_img_1.jpg" alt="фотография Карачаевск">
-          <div class="card__description">
-            <h2 class="card__title">Карачаевск</h2>
-            <button class="button button_type_like" aria-label="Лайкнуть"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__image" src="./images/elements_img_2.jpg" alt="Фотография горы Эльбрус">
-          <div class="card__description">
-            <h2 class="card__title">Гора Эльбрус</h2>
-            <button class="button button_type_like" aria-label="Лайкнуть"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__image" src="./images/elements_img_3.jpg" alt="Фотография гор Домбая">
-          <div class="card__description">
-            <h2 class="card__title">Домбай</h2>
-            <button class="button button_type_like" aria-label="Лайкнуть"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__image" src="./images/elements_img_2.jpg" alt="Фотография горы Эльбрус">
-          <div class="card__description">
-            <h2 class="card__title">Гора Эльбрус</h2>
-            <button class="button button_type_like" aria-label="Лайкнуть"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__image" src="./images/elements_img_3.jpg" alt="Фотография гор Домбая">
-          <div class="card__description">
-            <h2 class="card__title">Домбай</h2>
-            <button class="button button_type_like" aria-label="Лайкнуть"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__image" src="./images/elements_img_1.jpg" alt="фотография Карачаевск">
-          <div class="card__description">
-            <h2 class="card__title">Карачаево-Черкессия</h2>
-            <button class="button button_type_like" aria-label="Лайкнуть"></button>
-          </div>
-        </li>
-      </ul>
-    </main>
-    <footer class="footer">
-    <p class="footer__text">&copy; 2020 Mesto Russia</p>
-  </footer>   
+    <section class="cards">
+      <ul class="card-list main__card-list">
 
-  <div class="popup">
-    <div class="popup__container">      
-      <button class="button button_type_close" aria-label="Закрыть"></button>  
+      </ul> 
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__text">&copy; 2020 Mesto Russia</p>
+  </footer>
+
+  <div class="popup popup-edit">
+    <div class="popup__container">
+      <button class="button button_type_close" type="button" aria-label="Закрыть"></button>
       <form class="popup__form" name="info">
         <h3 class="popup__title">Редактировать профиль</h3>
-        <input class="popup__form-input" id="input-name" placeholder="Имя">
-        <input class="popup__form-input" id="input-profession" placeholder="Профессия">  
-        <button class="button button_type_save">Сохранить</button>           
-      </form>      
+        <input class="popup__form-input" id="input-name" required placeholder="Имя" name="name" />
+        <input class="popup__form-input" id="input-profession" required placeholder="Профессия" name="profession" />
+        <button class="button button_type_save" type="submit" >Сохранить</button>
+      </form>
     </div>
-  </div> 
+  </div>
+
+  <div class="popup popup-place">
+    <div class="popup__container">
+      <button class="button button_type_close" type="button" id="close-add" aria-label="Закрыть"></button>
+      <form class="popup__form" id="place-form" name="place-info">
+        <h3 class="popup__title">Новое место</h3>
+        <input class="popup__form-input" id="input-place" required placeholder="Название" name="place" />
+        <input class="popup__form-input" id="input-link" required placeholder="Ссылка на картинку" name="image-link" />
+        <button class="button button_type_save" type="submit">Создать</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="popup popup-image">
+    <div class="popup__container">
+      <button class="button button_type_close" type="button" aria-label="Закрыть"></button>
+      <figure class="figure__place">
+        <img class="figure__image" src="" alt="">
+        <figcaption class="figure__image-caption"></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <template class="template-cards" id="template-cards">
+    <li class="card">      
+      <button class="button button_type_delete" type="button" aria-label="Удалить"></button>
+      <img class="card__image" src="" alt="" >
+      <div class="card__description">
+        <h2 class="card__title"></h2>        
+        <button class="button button_type_like" type="button" aria-label="Лайкнуть"></button>        
+      </div> 
+    </li>
+  </template>
+
   <script src="./scripts/script.js"></script>
 </body>
+
 </html>
