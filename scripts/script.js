@@ -48,6 +48,10 @@ const popupCloseAdd = document.querySelector("#close-add"); /*закрыть п�
 const popupPlaceForm = document.querySelector("#place-form");
 
 const popupImage = document.querySelector(".popup-image"); /*попап открытия картинки с описанием*/
+const popupFigurePlace = document.querySelector(".figure-place"); /*figure открытого попапа картинки с описанием */
+const popupFigureImage = document.querySelector(".figure-place__image"); /*картинка попапа с описанием */
+const popupFigureCaption = document.querySelector(".figure-place__image-caption"); /*описание картинки попапа */
+const popupCloseImage = document.querySelector("#close-image"); /*кнопка закрытия попапа картинки с описанием */
 
 const popupSaveButton = document.querySelector(".button_type_save");
 const popupCloseButton = document.querySelector(".button_type_close");
@@ -59,10 +63,19 @@ function createElement(card) {
   const buttonDelete = cardElement.querySelector(".button_type_delete"); /*кнопка удаления карточки*/
   cardElement.querySelector(".card__image").src = card.link;
   cardElement.querySelector(".card__title").textContent = card.name;
+  cardElement.querySelector(".card__image").alt = card.name;
   buttonLike.addEventListener("click", liked);
   buttonDelete.addEventListener("click", deleteCard);
+  cardElement.querySelector(".card__image").addEventListener("click", function () {popupOpenImage(card)
+  });
   return cardElement;
 }
+
+function popupOpenImage(card) {
+  popupFigureCaption.textContent = card.name; 
+  popupFigureImage.src = card.link; 
+  popupOpen(popupImage); 
+} 
 
 function deleteCard(evt) {
   evt.target.closest(".card").remove();
@@ -109,6 +122,7 @@ function formSubmitHandler(evt) {
   popupClose(popup);
 }
 
+
 profileEditButton.addEventListener("click",() => popupOpen(popup));
 popupCloseButton.addEventListener("click", () => popupClose(popup));
 popupContainer.addEventListener("submit", formSubmitHandler);
@@ -116,3 +130,5 @@ popupContainer.addEventListener("submit", formSubmitHandler);
 buttonAddPlace.addEventListener("click", () => popupOpen(popupAddPlace)); 
 popupCloseAdd.addEventListener("click", () => popupClose(popupAddPlace));
 popupPlaceForm.addEventListener("submit", cardSubmitHandler);
+
+popupCloseImage.addEventListener("click", () => popupClose(popupImage));

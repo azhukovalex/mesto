@@ -13,8 +13,10 @@
   .button:hover {
     opacity: 0.6;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    
     }
   
   .button:focus {
     outline: none;
   }
+
