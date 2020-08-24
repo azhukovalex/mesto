@@ -16,19 +16,8 @@
   .button_type_close {
     left: 99%;
     bottom: 99%;
-<<<<<<< HEAD
-    background-image: url(../../../images/Add.svg);
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    border: none;
-    height: 42px;
-    width: 41px;
-    background-color: transparent;
-    background-size: cover;
-=======
     height: 30px;
     width: 30px;
->>>>>>> develop
   }
 }
 
