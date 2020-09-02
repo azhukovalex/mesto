@@ -2,6 +2,7 @@
 @import url(./__form/popup__form.css);
 @import url(./__title/popup__title.css);
 @import url(./__form-input/popup__form-input.css);
+@import url(./__span-error/popup__span-error.css);
 
 .popup {
   visibility: hidden;
