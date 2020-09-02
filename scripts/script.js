@@ -62,11 +62,9 @@ function closePopup(elem) {
   document.removeEventListener("mousedown", closePopupOverlay);
 }
 
-
-
 function closePopupEsc(evt) {
-  const escCode = 27;
-  if (evt.keyCode === escCode) {
+  const ESCAPE_KEY_CODE = 27;
+  if (evt.keyCode === ESCAPE_KEY_CODE) {
     closePopup(document.querySelector(".popup_opened"));
   }
 }
@@ -76,6 +74,8 @@ function closePopupOverlay(evt) {
     closePopup(document.querySelector(".popup_opened"));
   }
 }
+
+
 
 function fillProfileInfo() {
   openPopup(popupEdit);
@@ -89,8 +89,6 @@ function handleSubmitForm(evt) {
   profileProfession.textContent = popupInputProfession.value;
   closePopup(popupEdit);
 }
-
-
 
 function createElement(card) {
   const cardsTemplate = document.querySelector("#template-cards").content;

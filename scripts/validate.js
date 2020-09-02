@@ -33,6 +33,8 @@ const isValid = (formElement, inputElement) => {
     // находится проверяемое поле, и само это поле
     hideInputError(formElement, inputElement);
   }
+   
+
 };
 
 formElement.addEventListener('submit', function (evt) {
@@ -77,9 +79,11 @@ const toggleButtonState = (inputList, buttonElement) => {
   if (hasInvalidInput(inputList)) {
     // сделай кнопку неактивной
     buttonElement.classList.add('button_type_save_inactive');
+    buttonElement.setAttribute("disabled", "disabled");
   } else {
         // иначе сделай кнопку активной
     buttonElement.classList.remove('button_type_save_inactive');
+    buttonElement.removeAttribute("disabled", "disabled");
   }
 };
 
