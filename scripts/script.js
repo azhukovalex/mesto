@@ -50,6 +50,12 @@ const popupFigureImage = document.querySelector(".figure-place__image");
 const popupFigureCaption = document.querySelector(".figure-place__image-caption");
 const closePopupImage = document.querySelector("#close-image");
 
+
+
+
+
+
+
 function openPopup(elem) {
   elem.classList.add("popup_opened");
   document.addEventListener("keyup", closePopupEsc);
