@@ -56,7 +56,7 @@ function cleanError(form) { // функция обнуления ошибок
     span.classList.remove("popup__span-error_active"); //удаляем со спан модификатор с ошибкой
     span.textContent = "";
   });  
-  buttonSave.removeAttribute("disabled", "disabled"); //убрать атрибут disabled
+  buttonSave.removeAttribute("disabled"); //убрать атрибут disabled
 }
 
 

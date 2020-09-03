@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="239f6d2d-8676-479b-bb21-097231d6c946" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/button/_type/button_type_save.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/button/_type/button_type_save.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__form-input/popup__form-input.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__form-input/popup__form-input.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__span-error/popup__span-error.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__span-error/popup__span-error.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/validate.js" afterDir="false" />
     </list>
@@ -38,7 +33,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598990782295</updated>
-      <workItem from="1598990784387" duration="9442000" />
+      <workItem from="1598990784387" duration="10690000" />
+      <workItem from="1599153104853" duration="1333000" />
     </task>
     <servers />
   </component>
