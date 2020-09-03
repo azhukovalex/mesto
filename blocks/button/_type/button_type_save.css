@@ -25,6 +25,7 @@
 
 .button_type_save_inactive {
   opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
   cursor: default;
   color: black;
   background-color: white;

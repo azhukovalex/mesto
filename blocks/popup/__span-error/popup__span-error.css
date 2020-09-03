@@ -5,13 +5,14 @@
   line-height: 15px;
   color: #ff0000;
   opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   position: absolute;
   top: 135px;
 }
 
-
 .popup__span-error_active {
-    opacity: 1;
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
 .popup__span-error:last-of-type {

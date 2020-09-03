@@ -7,14 +7,12 @@ const showInputError = (formElement, inputElement, errorMessage) => {
   errorElement.classList.add("popup__span-error_active");
 };
 
-
 const hideInputError = (formElement, inputElement) => {
   const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
   inputElement.classList.remove("popup__form-input_type_error");
   errorElement.classList.remove("popup__span-error_active");
   errorElement.textContent = "";
 };
-
 
 const isValid = (formElement, inputElement) => {
   if (!inputElement.validity.valid) {
@@ -29,7 +27,7 @@ formElement.addEventListener("submit", function (evt) {
 });
 
 const setEventListeners = (formElement) => {
-  const inputList = Array.from(formElement.querySelectorAll(`.popup__form-input`));
+  const inputList = Array.from(formElement.querySelectorAll('.popup__form-input'));
   const buttonElement = formElement.querySelector(".button_type_save");
   toggleButtonState(inputList, buttonElement);
   inputList.forEach((inputElement) => {
@@ -46,20 +44,18 @@ const hasInvalidInput = (inputList) => {
   })
 };
 
-
 const toggleButtonState = (inputList, buttonElement) => {
   if (hasInvalidInput(inputList)) {
-    buttonElement.classList.add("button_type_save_inactive");
+    buttonElement.classList.add("button_type_save_inactive");  
     buttonElement.setAttribute("disabled", "disabled"); // добавить атрибут disabled
   } else {
-    buttonElement.classList.remove("button_type_save_inactive");
+    buttonElement.classList.remove("button_type_save_inactive"); 
     buttonElement.removeAttribute("disabled", "disabled"); //убрать атрибут disabled
   }
 };
 
 const enableValidation = () => {
   const formList = Array.from(document.querySelectorAll(".popup__form"));
-
   formList.forEach((formElement) => {
     formElement.addEventListener("submit", (evt) => {
       evt.preventDefault();
@@ -68,8 +64,13 @@ const enableValidation = () => {
   });
 };
 
-enableValidation();
 
 
-
-
+enableValidation({
+  formSelector: '.popup__form',
+  inputSelector: '.popup__form-input',
+  submitButtonSelector: '.button_type_save',
+  inactiveButtonClass: 'button_type_save_inactive',
+  inputErrorClass: 'popup__form-input_type_error',
+  errorClass: 'popup__span-error_active'
+});

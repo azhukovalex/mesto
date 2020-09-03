@@ -9,85 +9,85 @@
 </head>
 
 <body class="page">
-  <header class="header">
-    <img class="header__logo" src="./images/logo.svg" alt="Логотип Место" />
-  </header>
+<header class="header">
+  <img class="header__logo" src="./images/logo.svg" alt="Логотип Место" />
+</header>
 
-  <main class="main">
-    <section class="profile">
-      <div class="profile__author">
-        <img class="profile__image" src="./images/Cousteau.jpg" alt="Фотография Ж. Кусто" />
-        <div class="profile__info">
-          <div class="profile__text">
-            <h1 class="profile__title">Жак-Ив Кусто</h1>
-            <button class="button button_type_edit" type="button" id="close-edit" aria-label="Редактировать"></button>
-          </div>
-          <p class="profile__subtitle">Исследователь океана</p>
+<main class="main">
+  <section class="profile">
+    <div class="profile__author">
+      <img class="profile__image" src="./images/Cousteau.jpg" alt="Фотография Ж. Кусто" />
+      <div class="profile__info">
+        <div class="profile__text">
+          <h1 class="profile__title">Жак-Ив Кусто</h1>
+          <button class="button button_type_edit" type="button" id="close-edit" aria-label="Редактировать"></button>
         </div>
+        <p class="profile__subtitle">Исследователь океана</p>
       </div>
-      <button class="button button_type_add" type="button" aria-label="Добавить фото"></button>
-    </section>
-
-    <div class="cards">
-      <ul class="card-list main__card-list">
-      </ul> 
     </div>
-  </main>
-  <footer class="footer">
-    <p class="footer__text">&copy; 2020 Mesto Russia</p>
-  </footer>
+    <button class="button button_type_add" type="button" aria-label="Добавить фото"></button>
+  </section>
 
-  <div class="popup popup-edit">
-    <div class="popup__container">
-      <button class="button button_type_close" type="button" aria-label="Закрыть"></button>
-      <form class="popup__form" name="info" novalidate><!-- форма Профиля-->
-        <h3 class="popup__title">Редактировать профиль</h3>
-        <input class="popup__form-input" type="text" id="input-name" required placeholder="Имя" name="name" minlength="2" maxlength="40"><!--Инпут Имени-->
-            <span class="popup__span-error" id="input-name-error"></span><!--Ошибка имени-->
-        <input class="popup__form-input" type="text" id="input-profession" required placeholder="Профессия" name="profession" minlength="2" maxlength="200"><!--Инпут профессии-->
-            <span class="popup__span-error" id="input-profession-error"></span><!--Ошибка профессии-->
-        <button class="button button_type_save" type="submit" disabled>Сохранить</button>
-      </form>
-    </div>
+  <div class="cards">
+    <ul class="card-list main__card-list">
+    </ul>
   </div>
+</main>
+<footer class="footer">
+  <p class="footer__text">&copy; 2020 Mesto Russia</p>
+</footer>
 
-  <div class="popup popup-place">
-    <div class="popup__container">
-      <button class="button button_type_close" type="button" id="close-add" aria-label="Закрыть"></button>
-      <form class="popup__form" id="place-form" name="place-info" novalidate><!--Форма места-->
-        <h3 class="popup__title">Новое место</h3>
-        <input class="popup__form-input" type="text" id="input-place" required placeholder="Название" name="place" minlength="1" maxlength="30"> <!--Инпут Места-->
-            <span class="popup__span-error" id="input-place-error"></span><!--Ошибка места-->
-        <input class="popup__form-input" type="url" id="input-link" required placeholder="Ссылка на картинку" name="image-link"> <!--инпут ссылки-->
-            <span class="popup__span-error" id="input-link-error"></span><!--Ошибка ссылки-->
-        <button class="button button_type_save" type="submit" disabled>Создать</button>
-      </form>
-    </div>
+<div class="popup popup-edit">
+  <div class="popup__container">
+    <button class="button button_type_close" type="button" aria-label="Закрыть"></button>
+    <form class="popup__form" id="name-form" name="info" novalidate><!-- форма Профиля-->
+      <h3 class="popup__title">Редактировать профиль</h3>
+      <input class="popup__form-input" type="text" id="input-name" required placeholder="Имя" name="name" minlength="2" maxlength="40"><!--Инпут Имени-->
+      <span class="popup__span-error" id="input-name-error"></span><!--Ошибка имени-->
+      <input class="popup__form-input" type="text" id="input-profession" required placeholder="Профессия" name="profession" minlength="2" maxlength="200"><!--Инпут профессии-->
+      <span class="popup__span-error" id="input-profession-error"></span><!--Ошибка профессии-->
+      <button class="button button_type_save" type="submit" id="buttonSaveProfile">Сохранить</button>
+    </form>
   </div>
+</div>
 
-  <div class="popup popup-image">
-    <div class="popup__container popup-image__container">
-      <button class="button button_type_close" id="close-image" type="button" aria-label="Закрыть"></button>
-      <figure class="figure-place">
-        <img class="figure-place__image" src="#" alt="#">
-        <figcaption class="figure-place__image-caption"></figcaption>
-      </figure>
-    </div>
+<div class="popup popup-place">
+  <div class="popup__container">
+    <button class="button button_type_close" type="button" id="close-add" aria-label="Закрыть"></button>
+    <form class="popup__form" id="place-form" name="place-info" novalidate><!--Форма места-->
+      <h3 class="popup__title">Новое место</h3>
+      <input class="popup__form-input" type="text" id="input-place" required placeholder="Название" name="place" minlength="1" maxlength="30"> <!--Инпут Места-->
+      <span class="popup__span-error" id="input-place-error"></span><!--Ошибка места-->
+      <input class="popup__form-input" type="url" id="input-link" required placeholder="Ссылка на картинку" name="image-link"> <!--инпут ссылки-->
+      <span class="popup__span-error" id="input-link-error"></span><!--Ошибка ссылки-->
+      <button class="button button_type_save" id="buttonSaveCard" type="submit">Создать</button>
+    </form>
   </div>
+</div>
 
-  <template class="template-cards" id="template-cards">
-    <li class="card">      
-      <button class="button button_type_delete" type="button" aria-label="Удалить"></button>
-      <img class="card__image" src=" " alt=" " >
-      <div class="card__description">
-        <h2 class="card__title"></h2>        
-        <button class="button button_type_like" type="button" aria-label="Лайкнуть"></button>        
-      </div> 
-    </li>
-  </template>
+<div class="popup popup-image">
+  <div class="popup__container popup-image__container">
+    <button class="button button_type_close" id="close-image" type="button" aria-label="Закрыть"></button>
+    <figure class="figure-place">
+      <img class="figure-place__image" src="#" alt="#">
+      <figcaption class="figure-place__image-caption"></figcaption>
+    </figure>
+  </div>
+</div>
 
-  <script src="./scripts/script.js"></script>
-  <script src="./scripts/validate.js"></script>
+<template class="template-cards" id="template-cards">
+  <li class="card">
+    <button class="button button_type_delete" type="button" aria-label="Удалить"></button>
+    <img class="card__image" src=" " alt=" " >
+    <div class="card__description">
+      <h2 class="card__title"></h2>
+      <button class="button button_type_like" type="button" aria-label="Лайкнуть"></button>
+    </div>
+  </li>
+</template>
+
+<script src="./scripts/script.js"></script>
+<script src="./scripts/validate.js"></script>
 </body>
 
 </html>
