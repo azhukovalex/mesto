@@ -62,7 +62,7 @@ const toggleButtonState = (inputList, buttonElement) => {
 };
 
 const enableValidation = () => {
-  const formList = Array.from(document.querySelectorAll(validationSelectors.formSelector));  //------------> не работает, если указать вместо класса validationSelectors.formSelector
+  const formList = Array.from(document.querySelectorAll(validationSelectors.formSelector));  
   formList.forEach((formElement) => {
     formElement.addEventListener("submit", (evt) => {
       evt.preventDefault();
