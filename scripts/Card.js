@@ -20,7 +20,7 @@ export class Card {  //класс создания карточек
     evt.target.closest('.card').remove() // УДАЛЯШКА
   }
 
-  _liked(evt) {
+  _likeCard(evt) {
     evt.target.classList.toggle('button_type_like-liked')  // ЛАЙК 
   }
 
@@ -38,9 +38,9 @@ export class Card {  //класс создания карточек
       this._deleteCard(evt)
     });
     this._element.querySelector('.button_type_like').addEventListener('click', (evt) => {
-      this._liked(evt)
+      this._likeCard(evt)
     });
-    this._element.querySelector('.card__image').addEventListener('click', (evt) => {
+    this._cardImage.addEventListener('click', (evt) => {
       this._openPopupImage(evt)
     });
 
@@ -48,8 +48,9 @@ export class Card {  //класс создания карточек
 
   generateCard() {
     this._element = this._getTemplate();
-    this._element.querySelector('.card__image').src = this._link;
-    this._element.querySelector('.card__image').alt = this._name;
+    this._cardImage = this._element.querySelector('.card__image');
+    this._cardImage.src = this._link;
+    this._cardImage.alt = this._name;
     this._element.querySelector('.card__title').textContent = this._name;
     this._setEventListeners();
     return this._element;

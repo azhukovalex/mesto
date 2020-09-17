@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="239f6d2d-8676-479b-bb21-097231d6c946" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +41,9 @@
       <workItem from="1599509079530" duration="595000" />
       <workItem from="1599836946640" duration="837000" />
       <workItem from="1600087585193" duration="211000" />
-      <workItem from="1600087849949" duration="656000" />
+      <workItem from="1600087849949" duration="854000" />
+      <workItem from="1600148276966" duration="309000" />
+      <workItem from="1600148598849" duration="7398000" />
     </task>
     <servers />
   </component>
@@ -50,6 +51,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600148556632">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600148556632" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1599837185014">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

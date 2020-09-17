@@ -27,8 +27,9 @@ const initialCards = [
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
   }
 ];
-
-const closePopupButton = document.querySelector('.button_type_close');
+const buttonSaveProfile = document.querySelector('#buttonSaveProfile');
+const buttonSavePlace = document.querySelector('#buttonSaveCard');
+const closePopupEdit = document.querySelector('.button_type_close');
 const profileName = document.querySelector('.profile__title');
 const profileProfession = document.querySelector('.profile__subtitle');
 const profileEditButton = document.querySelector('.button_type_edit');
@@ -76,10 +77,24 @@ function closePopupOverlay(evt) {
   }
 }
 
+function cleanError(form) { // функция обнуления ошибок
+  form.querySelectorAll('.popup__form-input').forEach((input) => {
+    input.classList.remove('popup__form-input_type_error'); //удаляем с инпут модификатор с ошибкой
+  });
+  form.querySelectorAll('.popup__span-error').forEach((span) => {
+    span.classList.remove('popup__span-error_active'); //удаляем со спан модификатор с ошибкой
+    span.textContent = '';
+  });
+
+}
+
 function fillProfileInfo() {
   popupInputName.value = profileName.textContent;
   popupInputProfession.value = profileProfession.textContent;
-  validation();
+  //validation(); // убрать по замечанию ревьюера
+  cleanError(popupNameForm);
+  buttonSaveProfile.classList.remove('button_type_save_inactive');
+  buttonSaveProfile.removeAttribute("disabled");
   openPopup(popupEdit);
 }
 
@@ -92,7 +107,6 @@ function handleSubmitForm(evt) {
 
 function handleSubmitCard(evt) {
   evt.preventDefault();
-  const cardList = document.querySelector('.card-list');
   const cardData = {
     link: popupInputLink.value,
     name: popupInputPlace.value
@@ -128,11 +142,13 @@ function validation() {
 validation();
 
 profileEditButton.addEventListener('click', fillProfileInfo);
-closePopupButton.addEventListener('click', () => closePopup(popupEdit));
+closePopupEdit.addEventListener('click', () => closePopup(popupEdit));
 
 buttonAddPlace.addEventListener('click', () => {
+  buttonSavePlace.classList.add('button_type_save_inactive');
+  cleanError(popupPlaceForm);
   clearInputCardsForm();
-  validation();
+
   openPopup(popupAddPlace);
 });
 closePopupAdd.addEventListener('click', () => closePopup(popupAddPlace));
