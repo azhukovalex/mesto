@@ -1,11 +1,11 @@
 export class FormValidator {
-  constructor(data, formElement) {
+  constructor(settings, formElement) {
     this._formElement = formElement;
-    this._inputSelector = data.inputSelector;
-    this._submitButtonSelector = data.submitButtonSelector;
-    this._inactiveButtonClass = data.inactiveButtonClass;
-    this._inputErrorClass = data.inputErrorClass;
-    this._errorClass = data.errorClass;
+    this._inputSelector = settings.inputSelector;
+    this._submitButtonSelector = settings.submitButtonSelector;
+    this._inactiveButtonClass = settings.inactiveButtonClass;
+    this._inputErrorClass = settings.inputErrorClass;
+    this._errorClass = settings.errorClass;
   }
 
   _showInputError = (inputElement, errorMessage) => {
@@ -61,7 +61,7 @@ export class FormValidator {
   };
 
   enableValidation = () => {
-    this._setEventListeners(this._formElement);
+    this._setEventListeners();
   };
 }
 

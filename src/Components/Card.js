@@ -1,12 +1,11 @@
-import { openPopup, popupImage } from './index.js'
-
 export class Card {  //класс создания карточек
-  constructor(data, cardSelector) {
+  constructor({data, handleCardClick}, cardSelector) {
     this._name = data.name;
     this._link = data.link;
+    this._handleCardClick = handleCardClick;
     this._cardSelector = cardSelector;
-
   }
+
   _getTemplate() {
     const cardElement = document
       .querySelector(this._cardSelector)
@@ -16,21 +15,14 @@ export class Card {  //класс создания карточек
     return cardElement;
   }
 
-  _deleteCard(evt) {
-    evt.target.closest('.card').remove() // УДАЛЯШКА
+  _deleteCard() {
+    //evt.target.closest('.card').remove() // УДАЛЯШКА
+    this._element.remove();
+    this._element = null;
   }
 
   _likeCard(evt) {
-    evt.target.classList.toggle('button_type_like-liked')  // ЛАЙК 
-  }
-
-  _openPopupImage(evt) {
-    const popupFigureImage = document.querySelector('.figure-place__image');
-    const popupFigureCaption = document.querySelector('.figure-place__image-caption');
-    popupFigureCaption.textContent = evt.target.alt;
-    popupFigureImage.src = evt.target.src;
-    popupFigureImage.alt = evt.target.src;
-    openPopup(popupImage);
+    evt.target.classList.toggle('button_type_like-liked')  // ЛАЙК
   }
 
   _setEventListeners() {
@@ -40,24 +32,21 @@ export class Card {  //класс создания карточек
     this._element.querySelector('.button_type_like').addEventListener('click', (evt) => {
       this._likeCard(evt)
     });
-    this._cardImage.addEventListener('click', (evt) => {
-      this._openPopupImage(evt)
+    this._element.querySelector('.card__image').addEventListener('click', (evt) => {
+      this._handleCardClick(evt)
     });
-
   }
 
   generateCard() {
     this._element = this._getTemplate();
+    this._setEventListeners();
     this._cardImage = this._element.querySelector('.card__image');
+    this._element.querySelector('.card__title').textContent = this._name;
     this._cardImage.src = this._link;
     this._cardImage.alt = this._name;
-    this._element.querySelector('.card__title').textContent = this._name;
-    this._setEventListeners();
     return this._element;
   }
 }
-
-
 
 
 

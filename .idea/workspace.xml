@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="239f6d2d-8676-479b-bb21-097231d6c946" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/FormValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/FormValidator.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +22,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../mesto фичи" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -43,7 +42,12 @@
       <workItem from="1600087585193" duration="211000" />
       <workItem from="1600087849949" duration="854000" />
       <workItem from="1600148276966" duration="309000" />
-      <workItem from="1600148598849" duration="7398000" />
+      <workItem from="1600148598849" duration="7695000" />
+      <workItem from="1600352664670" duration="1191000" />
+      <workItem from="1600897642779" duration="596000" />
+      <workItem from="1600962265562" duration="597000" />
+      <workItem from="1601194034868" duration="2050000" />
+      <workItem from="1601544733493" duration="19000" />
     </task>
     <servers />
   </component>
@@ -55,9 +59,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600148556632" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1599837185014">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1601544748142">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599837185014" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601544748142" />
   </component>
 </project>
