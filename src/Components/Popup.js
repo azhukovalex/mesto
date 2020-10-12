@@ -1,46 +1,33 @@
-const ESCAPE_KEY = 'Escape';
+import { ESCAPE_KEY } from '../utils/Constants.js'
 
-export class Popup {
-  constructor(popupSelector) {
-    this._popupSelector = popupSelector
+export default class Popup {
+  constructor(popupElement) {
+    this._popupElement = popupElement;
+    this._handleEscClose = (evt) => {
+      if (evt.key === ESCAPE_KEY) {
+        this.close();
+      }
+    }
+    this._handleOverlayClick = (evt) => {
+      if (evt.target.classList.contains("popup_opened")) {
+        this.close();
+      }
+    }
+    this._setEventListeners();
   }
-
   open() {
-    this._popupSelector.classList.add('popup_opened');
-    this.setEventListeners();
+    this._popupElement.classList.add('popup_opened');
+    document.addEventListener("keyup", this._handleEscClose);
+    document.addEventListener("click", this._handleOverlayClick);
   }
-
   close() {
-    this._popupSelector.classList.remove('popup_opened');
-    document.removeEventListener('keyup', this._handleEscClose);
+    this._popupElement.classList.remove("popup_opened");
+    document.removeEventListener("keyup", this._handleEscClose);
+    document.removeEventListener("click", this._handleOverlayClick);
   }
-
-  _closePopupOverlay(evt) {
-    //const popupOpened = document.querySelector('.popup_opened');
-    if (evt.target.classList.contains('popup_opened')) {
-      this.close();
-    }
+  _setEventListeners() {
+    this._popupElement.querySelector(".button_type_close").addEventListener('click', () => this.close());
   }
-
-  _handleEscClose(evt) {
-    //const popupOpened = document.querySelector('.popup_opened');
-    if (evt.key === ESCAPE_KEY) {
-      this.close();
-    }
-  }
-
-  setEventListeners() {
-    this._buttonClose = this._popupSelector.querySelector(".button_type_close");
-    this._buttonClose.addEventListener("click", () => {
-      this.close();
-    });
-    document.addEventListener('keyup', (evt) => {
-      this._handleEscClose(evt)
-    });
-    document.addEventListener('mousedown', (evt) => {
-      this._closePopupOverlay(evt)
-    });
-  }
-
 }
 
+//переделать

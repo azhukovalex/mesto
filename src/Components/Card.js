@@ -1,9 +1,12 @@
-export class Card {  //класс создания карточек
+
+export default class Card {  
   constructor({data, handleCardClick}, cardSelector) {
     this._name = data.name;
     this._link = data.link;
     this._handleCardClick = handleCardClick;
     this._cardSelector = cardSelector;
+
+
   }
 
   _getTemplate() {
@@ -15,15 +18,15 @@ export class Card {  //класс создания карточек
     return cardElement;
   }
 
-  _deleteCard() {
-    //evt.target.closest('.card').remove() // УДАЛЯШКА
+  _deleteCard() {  
     this._element.remove();
     this._element = null;
   }
 
   _likeCard(evt) {
-    evt.target.classList.toggle('button_type_like-liked')  // ЛАЙК
+    evt.target.classList.toggle('button_type_like-liked') 
   }
+
 
   _setEventListeners() {
     this._element.querySelector('.button_type_delete').addEventListener('click', (evt) => {
@@ -35,6 +38,7 @@ export class Card {  //класс создания карточек
     this._element.querySelector('.card__image').addEventListener('click', (evt) => {
       this._handleCardClick(evt)
     });
+
   }
 
   generateCard() {
@@ -49,5 +53,5 @@ export class Card {  //класс создания карточек
 }
 
 
-
+//збс
 

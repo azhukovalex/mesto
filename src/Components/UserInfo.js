@@ -1,7 +1,9 @@
+
 export default class UserInfo {
-  constructor({userName, userProfession}) {
+  constructor({ userName, userProfession }) {
     this._name = userName;
     this._profession = userProfession;
+
   }
 
   getUserInfo() {
@@ -16,3 +18,4 @@ export default class UserInfo {
     this._profession.textContent = data.profession;
   }
 }
+//хз
