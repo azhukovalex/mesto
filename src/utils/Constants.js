@@ -43,6 +43,8 @@ const popupImage = document.querySelector(".popup-image");
 const templateCards = "#template-cards";
 const ESCAPE_KEY = "Escape";
 
+
+
 const settingsValidation = {
   formSelector: ".popup__form", //validationSelectors.formSelector
   inputSelector: ".popup__form-input", //validationSelectors.inputSelector
@@ -66,7 +68,7 @@ export {
   popupAddPlace,
   popupImage,
   templateCards,
-   settingsValidation,
- 
+  settingsValidation,
+
 };
 

@@ -23,6 +23,10 @@ import {
 } from "../utils/Constants.js";
 
 
+const formEditValidator = new FormValidator(settingsValidation, popupEdit);
+const formCardValidator = new FormValidator(settingsValidation, popupAddPlace);
+
+
 const userInfo = new UserInfo({
   userName: profileName,
   userProfession: profileProfession,
@@ -32,13 +36,14 @@ const popupProfileForm = new PopupWithForm(
   popupEdit
 );
 
+
 const openProfile = () => {
   const profileInformation = userInfo.getUserInfo();
   popupInputName.value = profileInformation.name;
-  popupInputProfession.value = profileInformation.profession;
-  const formEditValidator = new FormValidator(settingsValidation, popupEdit);
-  formEditValidator.checkOpenedPopup(popupEdit);
-  popupProfileForm.open();  //или 
+  popupInputProfession.value = profileInformation.profession;  
+  formEditValidator.checkOpenedPopup();
+  formEditValidator.enableValidation();
+  popupProfileForm.open();  
 
 }
 
@@ -76,23 +81,10 @@ const popupPlaces = new PopupWithForm(
 );
 
 const openPlaceForm = () => {
-  const formCardValidator = new FormValidator(
-    settingsValidation,
-    popupAddPlace
-  );
-  formCardValidator.checkOpenedPopup(popupAddPlace);
+  formCardValidator.checkOpenedPopup();
+  formCardValidator.enableValidation();
   popupPlaces.open();
 };
 
-function validation() {
-  const formList = Array.from(document.querySelectorAll('.popup__form'));
-  formList.forEach((form) => {
-    const formValidator = new FormValidator(settingsValidation, form);
-    formValidator.enableValidation();
-  })
-}
-
-validation();
 defaultArrPictures.renderItems(initialCards);
-
 buttonAddPlace.addEventListener('click', openPlaceForm); 

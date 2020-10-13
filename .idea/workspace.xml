@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="239f6d2d-8676-479b-bb21-097231d6c946" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/FormValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/FormValidator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Popup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/PopupWithForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PopupWithForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/PopupWithImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PopupWithImage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/Constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Constants.js" afterDir="false" />
     </list>
@@ -59,7 +55,7 @@
       <workItem from="1602170780851" duration="636000" />
       <workItem from="1602179746844" duration="612000" />
       <workItem from="1602523103711" duration="87000" />
-      <workItem from="1602532920893" duration="595000" />
+      <workItem from="1602532920893" duration="601000" />
     </task>
     <servers />
   </component>
