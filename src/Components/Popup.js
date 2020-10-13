@@ -7,13 +7,13 @@ export default class Popup {
     this._handleOverlayClick = this._handleOverlayClick.bind(this);
     this.setEventListeners();
   }
-  _handleEscClose = (evt) => {
+  _handleEscClose(evt) {
     if (evt.key === ESCAPE_KEY) {
       this.close();
     }
   }
   
-  _handleOverlayClick = (evt) => {
+  _handleOverlayClick(evt) {
     if (evt.target.classList.contains("popup_opened")) {
       this.close();
     }
