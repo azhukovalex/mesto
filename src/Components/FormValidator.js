@@ -46,6 +46,15 @@ export default class FormValidator {
     }
   };
 
+  checkOpenedPopup() {   
+    const inputList = Array.from(this._formElement.querySelectorAll(this._inputSelector)); 
+    const buttonElement = this._formElement.querySelector(this._submitButtonSelector); 
+    this._toggleButtonState(inputList, buttonElement); 
+    inputList.forEach((inputElement) => { 
+       this._hideInputError(inputElement); 
+    });
+  };
+ 
   _setEventListeners() {
     const inputList = Array.from(this._formElement.querySelectorAll(this._inputSelector));
     const buttonElement = this._formElement.querySelector(this._submitButtonSelector);

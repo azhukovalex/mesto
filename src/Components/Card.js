@@ -5,8 +5,6 @@ export default class Card {
     this._link = data.link;
     this._handleCardClick = handleCardClick;
     this._cardSelector = cardSelector;
-
-
   }
 
   _getTemplate() {
@@ -53,5 +51,5 @@ export default class Card {
 }
 
 
-//збс
+
 

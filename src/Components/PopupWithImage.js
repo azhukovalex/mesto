@@ -14,10 +14,9 @@ export class PopupWithImage extends Popup {
   open(data) {
 
     this._figurePlaceImage.src = data.link;
-    this._figurePlaceImage.alr = `${data.name}`;
+    this._figurePlaceImage.alt = `${data.name}`;
     this._figurePlaceCaption.textContent = data.name;
     super.open();
   }
 }
 
-//Збс

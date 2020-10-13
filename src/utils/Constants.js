@@ -66,5 +66,7 @@ export {
   popupAddPlace,
   popupImage,
   templateCards,
-  settingsValidation,
+   settingsValidation,
+ 
 };
+

@@ -19,7 +19,9 @@ import {
   popupImage,
   templateCards,
   settingsValidation,
+
 } from "../utils/Constants.js";
+
 
 const userInfo = new UserInfo({
   userName: profileName,
@@ -35,9 +37,10 @@ const openProfile = () => {
   popupInputName.value = profileInformation.name;
   popupInputProfession.value = profileInformation.profession;
   const formEditValidator = new FormValidator(settingsValidation, popupEdit);
-  formEditValidator.enableValidation();
-  popupProfileForm.open();
-};
+  formEditValidator.checkOpenedPopup(popupEdit);
+  popupProfileForm.open();  //или 
+
+}
 
 profileEditButton.addEventListener("click", openProfile);
 
@@ -77,10 +80,19 @@ const openPlaceForm = () => {
     settingsValidation,
     popupAddPlace
   );
-  formCardValidator.enableValidation();
+  formCardValidator.checkOpenedPopup(popupAddPlace);
   popupPlaces.open();
 };
 
+function validation() {
+  const formList = Array.from(document.querySelectorAll('.popup__form'));
+  formList.forEach((form) => {
+    const formValidator = new FormValidator(settingsValidation, form);
+    formValidator.enableValidation();
+  })
+}
+
+validation();
 defaultArrPictures.renderItems(initialCards);
 
-buttonAddPlace.addEventListener("click", openPlaceForm);
+buttonAddPlace.addEventListener('click', openPlaceForm); 

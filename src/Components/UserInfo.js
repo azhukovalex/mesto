@@ -18,4 +18,3 @@ export default class UserInfo {
     this._profession.textContent = data.profession;
   }
 }
-//хз
