@@ -1,4 +1,4 @@
-import './index.css';
+//import './index.css';
 import Card from "../Components/Card.js";
 import FormValidator from "../Components/FormValidator.js";
 import Section from "../Components/Section.js";
@@ -6,13 +6,8 @@ import { PopupWithImage } from "../Components/PopupWithImage.js";
 import PopupWithForm from "../Components/PopupWithForm.js";
 import UserInfo from "../Components/UserInfo.js";
 import {
-
-  //profileName,
-  //profileProfession,
   profileEditButton,
   popupEdit,
-  popupInputName,
-  popupInputProfession,
   buttonAddPlace,
   cardList,
   popupAddPlace,
@@ -23,12 +18,15 @@ import {
   popupEditAvatar,
   profileImage,
   profileInfo,
-  popupConfDelete, ////////////
+  popupConfDelete,
   popupInputAvatarLink,
   prepend
 } from "../utils/Constants.js";
 
 import Api from '../Components/Api.js';
+
+const popupInputName = document.querySelector('#input-name');
+const popupInputProfession = document.querySelector('#input-profession');
 
 const api = new Api({
   baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-16',
@@ -52,8 +50,6 @@ const formEditValidator = new FormValidator(settingsValidation, popupEdit);
 const formCardValidator = new FormValidator(settingsValidation, popupAddPlace);
 const formAvatarValidator = new FormValidator(settingsValidation, popupEditAvatar);
 
-
-
 Promise.all([api.getUserInform(), api.getCards()]) //загрузка данных профиля
   .then(([user, cards]) => {
     userInfo.setUserInfo(user);
@@ -63,41 +59,34 @@ Promise.all([api.getUserInform(), api.getCards()]) //загрузка данны
     console.log(err);
   });
 
-  const userInfo = new UserInfo(profileInfo,
-    profileImage
-  );
+const userInfo = new UserInfo(profileInfo,
+  profileImage
+);
 
-
-  const profileForm = new PopupWithForm({ //отправляем информацию, введенную пользоавателем на сервер
-    submit: () => {
-     loading(true, popupEdit, 'Сохранить', 'Сохранение...');
-      api.updateProfileInfo(popupInputName.value, popupInputProfession.value)
-        .then((result) => {
-          userInfo.setUserInfo(result);
-          profileForm.close();
-        })
-        .catch((err) => {
-          console.log(err); // выведем ошибку в консоль
-        })
-       .finally(() => {
-          loading(false, popupEdit, 'Сохранить', 'Сохранение...');
+const profileForm = new PopupWithForm({ //отправляем информацию, введенную пользоавателем на сервер
+  submit: () => {
+    loading(true, popupEdit, 'Сохранить', 'Сохранение...');
+    api.updateProfileInfo(popupInputName.value, popupInputProfession.value)
+      .then((result) => {
+        userInfo.setUserInfo(result);
+        profileForm.close();
+      })
+      .catch((err) => {
+        console.log(err); // выведем ошибку в консоль
+      })
+      .finally(() => {
+        loading(false, popupEdit, 'Сохранить', 'Сохранение...');
       });
-    }
-  }, popupEdit);
-
-
+  }
+}, popupEdit);
 
 const openProfile = () => {
   const infoAuthor = userInfo.getUserInfo();
   popupInputName.value = infoAuthor.name;
   popupInputProfession.value = infoAuthor.about;
   formEditValidator.checkOpenedPopup();
-  formEditValidator.enableValidation();
   profileForm.open();
-
 }
-
-
 
 const popupWithImage = new PopupWithImage(popupImage);
 let valueCard;
@@ -108,10 +97,10 @@ const fillCardValue = (object, className) => { //запись значений �
   };
 };
 
-const popupAvatar = new PopupWithForm({ 
+const popupAvatar = new PopupWithForm({
   submit: () => {
-   loading(true, popupEditAvatar, 'Сохранить', 'Сохранение...');
-    api.updateAvatar( popupInputAvatarLink.value)
+    loading(true, popupEditAvatar, 'Сохранить', 'Сохранение...');
+    api.updateAvatar(popupInputAvatarLink.value)
       .then((item) => {
         userInfo.setUserAvatar(item);
       })
@@ -121,9 +110,9 @@ const popupAvatar = new PopupWithForm({
       .catch((err) => {
         console.log(err);
       })
-       .finally(() => {
+      .finally(() => {
         loading(false, popupEditAvatar, 'Сохранить', 'Сохранение...');
-       });
+      });
   }
 }, popupEditAvatar);
 
@@ -156,8 +145,6 @@ const cardForm = new PopupWithForm({
       });
   }
 }, popupAddPlace);
-
-
 
 const addLike = (object) => { //добавление лайка
   api.addLike(object)
@@ -218,17 +205,18 @@ const defaultCardList = new Section({ //добавление матрицы ка
 
 const openPlaceForm = () => {
   formCardValidator.checkOpenedPopup();
-  formCardValidator.enableValidation();
   cardForm.open();
 };
 
 const openAvatarForm = () => { //аватар
   formAvatarValidator.checkOpenedPopup();
-  formAvatarValidator.enableValidation();
   popupAvatar.open();
 }
 
-//defaultArrPictures.renderItems(initialCards);
+formEditValidator.enableValidation();
+formCardValidator.enableValidation();
+formAvatarValidator.enableValidation();
+
 buttonAddPlace.addEventListener('click', openPlaceForm);
 buttonEditAvatar.addEventListener('click', openAvatarForm); //слуш. аватара
 profileEditButton.addEventListener("click", openProfile);
