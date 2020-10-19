@@ -1,7 +1,10 @@
+
 @import url(./_type/button_type_add.css);
 @import url(./_type/button_type_close.css);
 @import url(./_type/button_type_edit.css);
 @import url(./_type/button_type_like.css);
+@import url(./_type/button_type_avatar.css);
+
 
 
 .button {
@@ -11,7 +14,7 @@
   }
   
   .button:hover {
-    opacity: 0.6;
+    opacity: 0.8;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
     
     }

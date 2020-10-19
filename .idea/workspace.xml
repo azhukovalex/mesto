@@ -3,7 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="239f6d2d-8676-479b-bb21-097231d6c946" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Card.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Popup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/PopupWithForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PopupWithForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/PopupWithImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PopupWithImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Section.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Section.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UserInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/button/_type/button_type_like.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/button/_type/button_type_like.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/button/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/button/button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/card/__image/card__image.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/card/__image/card__image.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/card/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/card/card.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/popup/__span-error/popup__span-error.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/__span-error/popup__span-error.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/popup/popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/popup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/profile/__image/profile__image.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__image/profile__image.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/profile/__info/profile__info.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__info/profile__info.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/profile/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/Constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Constants.js" afterDir="false" />
     </list>
@@ -55,7 +70,8 @@
       <workItem from="1602170780851" duration="636000" />
       <workItem from="1602179746844" duration="612000" />
       <workItem from="1602523103711" duration="87000" />
-      <workItem from="1602532920893" duration="601000" />
+      <workItem from="1602532920893" duration="1195000" />
+      <workItem from="1602836933809" duration="594000" />
     </task>
     <servers />
   </component>

@@ -15,7 +15,3 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
-.popup__span-error:last-of-type {
-  position: absolute;
-  top: 194px;
-}
